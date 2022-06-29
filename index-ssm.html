@@ -72,7 +72,7 @@
 		<div style="position: relative; width: 100%; height: auto; margin:0; padding:0;">
 
 			<div width="100%" class="image">
-			  <img src="bg-ssm-sy.png" width="100%" height="auto" alt="" onclick="window.location.href=('index-ssm-hs.html?name='+getQueryString('name')+'&id='+getQueryString('id')+'&hs='+getQueryString('hs'))">
+			  <img src="bg-ssm-sy1.png" width="100%" height="auto" alt="" onclick="window.location.href=('index-ssm-hs.html?name='+getQueryString('name')+'&id='+getQueryString('id')+'&hs='+getQueryString('hs'))">
 			</div><!--
 			  <a href="javascript:window.location.href=('index1-hs.html?name='+getQueryString('name')+'&id='+getQueryString('id')+'&hs='+getQueryString('hs'));" style="top: 0; left:   0; width: 33%; height: 100%;"></a>
 			  <a href="https://xc.caict.ac.cn/#/result?t=1645578399536" style="top: 0; left: 33%; width: 33%; height: 100%;"></a>
@@ -88,11 +88,13 @@
 			<div style="position: absolute; width: 30px; top: 190px; right:0; margin:0; background-color:#FFFBEF; font-size: 42px;" >&nbsp;</div>
 			-->
 			<div id="times" style="position: absolute; width: 100%; top: 585px; left: 0; color:black;display:inline;"></div>
+			
+			<div id="xname" style="position: absolute; width: 100%; top: 1345px; left: 0; color: #75574a; font-size: 48px;text-align: center; font-family: '方正美黑';">习包子</div>
 		</div>
         <script type="text/javascript">
-			/*
 			var div1 = document.getElementById("xname");
-			div1.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+getQueryString("name");
+			div1.innerHTML = getQueryString("name");
+			/*
 			var div2 = document.getElementById("xid");
 			var id = getQueryString("id");
 			div2.innerHTML = id.substring(0,3)+"******"+id.substring(15)+"&nbsp;&nbsp;&nbsp;";
