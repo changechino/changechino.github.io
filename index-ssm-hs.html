@@ -88,12 +88,12 @@
 			
 				var    hs = getQueryString("hs");
 				
-				var mins1 = parseInt(Date.parse(date1).toString().hashCode().toString().slice(-2));
-				var mins2 = parseInt(Date.parse(date2).toString().hashCode().toString().slice(-2));
+				var mins1 = Math.abs(parseInt(Date.parse(date1).toString().hashCode().toString().slice(-2))-40);
+				var mins2 = Math.abs(parseInt(Date.parse(date2).toString().hashCode().toString().slice(-2))-40);
 					mins1 = (mins1>9?mins1:("0"+mins1));
 					mins2 = (mins2>9?mins2:("0"+mins2));
-				var secs1 = parseInt(Date.parse(date1).toString().hashCode().toString().hashCode().toString().slice(-2));
-				var secs2 = parseInt(Date.parse(date2).toString().hashCode().toString().hashCode().toString().slice(-2));
+				var secs1 = Math.abs(parseInt(Date.parse(date1).toString().hashCode().toString().hashCode().toString().slice(-2))-40);
+				var secs2 = Math.abs(parseInt(Date.parse(date2).toString().hashCode().toString().hashCode().toString().slice(-2))-40);
 					secs1 = (secs1>9?secs1:("0"+secs1));
 					secs2 = (secs2>9?secs2:("0"+secs2));
                 //获取当前时间
