@@ -75,6 +75,16 @@
 				else
 					div1.innerHTML = date1+(mins>9?mins:("0"+mins));
             }
+            //得到查询时间并写入div
+            function getDateCheck(){
+                //获取当前时间
+                var date = new Date();
+				var date1 = new Date(date).format("yyyy/MM/dd hh:mm:ss");
+                //获取div
+                var div1 = document.getElementById("timec");
+                //将时间写入div
+				div1.innerHTML = date1;
+            }
             //使用定时器每秒向div写入当前时间
             //setInterval("getDate()",1000);
             function getItem(){
@@ -93,17 +103,17 @@
 				var hs = getQueryString("hs");
 				//if(hs==null) hs="08";
                 //将时间写入div
-                div1.innerHTML += "<div style='position: absolute;width: 100%;top: 670px;left: 0;'><img width='100%' height='auto' src='bg-hs-"+Math.floor(Math.random() * 1)+".png' /></div><div style='position: absolute;top:  864px;left: 225px;color:#353D40;font-size: 36px;font-family: 方正美黑;'>"+date1+"&nbsp;"+hs+":"+(mins1>9?mins1:("0"+mins1))+"</div>";
-				div1.innerHTML += "<div style='position: absolute;width: 100%;top:1042px;left: 0;'><img width='100%' height='auto' src='bg-hs-"+Math.floor(Math.random() * 1)+".png' /></div><div style='position: absolute;top: 1236px;left: 225px;color:#353D40;font-size: 36px;font-family: 方正美黑;'>"+date2+"&nbsp;"+hs+":"+(mins2>9?mins2:("0"+mins2))+"</div>";
-				div1.innerHTML += "<div id='name0' style='position: absolute; top:  340px; left: 225px; color: #494949; font-size: 38px; font-family: 方正美黑;'></div>";
-				div1.innerHTML += "<div id='name1' style='position: absolute; top:  708px; left: 225px; color: #494949; font-size: 38px; font-family: 方正美黑;'></div>";
-				div1.innerHTML += "<div id='name2' style='position: absolute; top: 1081px; left: 225px; color: #494949; font-size: 38px; font-family: 方正美黑;'></div>";
-				div1.innerHTML += "<div id='xid'   style='position: absolute; top: 121px; left: 209px; color: white; font-size: 32px; font-family: 方正美黑;'>123456********1234</div>";
+                div1.innerHTML += "<div style='position: absolute;width: 100%;top: 670px;left: 0;'></div><div style='position: absolute;top: 1355px;right: 35px;color:#353D40;font-size: 36px;font-family: 方正美黑;'>"+date1+"&nbsp;"+hs+":"+(mins1>9?mins1:("0"+mins1))+"</div>";
+				div1.innerHTML += "<div style='position: absolute;width: 100%;top:1042px;left: 0;'></div><div style='position: absolute;top: 1905px;right: 35px;color:#353D40;font-size: 36px;font-family: 方正美黑;'>"+date2+"&nbsp;"+hs+":"+(mins2>9?mins2:("0"+mins2))+"</div>";
+				div1.innerHTML += "<div id='name0' style='position: absolute; top:  550px; right: 35px; color: #494949; font-size: 38px; font-family: 方正美黑;'>第一人民医院</div>";
+				div1.innerHTML += "<div id='name1' style='position: absolute; top: 1111px; right: 35px; color: #494949; font-size: 38px; font-family: 方正美黑;'>第一人民医院</div>";
+				div1.innerHTML += "<div id='name2' style='position: absolute; top: 1663px; right: 35px; color: #494949; font-size: 38px; font-family: 方正美黑;'>第一人民医院</div>";
+				div1.innerHTML += "<div id='xid'   style='position: absolute; top: 143px;  left: 247px; color: #EFFAFC; font-size: 43px; font-family: 方正美黑;'>123456********1234</div>";
             }
         </script>
 		<div id="items" style="position: relative; width: 100%; height: auto; margin:0; padding:0;">
 			
-			<img src="bg-hs.png" width="100%" height="auto" alt="" onclick="window.location.href=('index-slider.html?name='+getQueryString('name')+'&id='+getQueryString('id')+'&hs='+getQueryString('hs')+'&num='+getQueryString('num'))" />
+			<img src="bg-hs.jpg" width="100%" height="auto" alt="" onclick="window.location.href=('index-slider.html?name='+getQueryString('name')+'&id='+getQueryString('id')+'&hs='+getQueryString('hs')+'&num='+getQueryString('num')+'&i01='+getQueryString('i01')+'&cyd='+getQueryString('cyd'))" />
 			<!--
 			<div id="xid" style="position: absolute; width: 100%; top: 117px; left: 209px; color: white; font-size: 32px; font-family: '方正美黑';">123456********1234</div>
 			
@@ -114,17 +124,21 @@
 			<div style="position: absolute; width: 100%; top: 220px; color:#D36C2D; font-size: 45px;" ><marquee scrollamount=14 direction="left" behavior="scroll">若您有近14天中高风险地区旅居史(含境外)请及时信息更新和风险报备。</marquee></div>
 			-->
 			
-			<div id="times" style="position: absolute; top: 464px; left: 225px;color:red;"></div>
+			<div id="xname" style="position: absolute; width: 100%; top: 69px; left: 166px; color:#EFFAFC; font-size: 40px; font-family: '方正美黑';">习包子</div>
+			<div id="times" style="position: absolute; top: 768px; right: 35px;color:#353D40;"></div>
+			<div id="timec" style="position: absolute; top: 215px; left: 205px;color:#EFFAFC;font-size: 43px;"></div>
 			<!--
 			<div id="items" style="position: absolute; width: 100%; top: 668px; left: 0; height: auto;"></div>-->
 		</div>
         <script type="text/javascript">
+			getDateCheck();
 			getDate();
 			getItem();
-			var name=getQueryString("name");
-			//document.getElementById("name0").innerHTML = name;
-			//document.getElementById("name1").innerHTML = name;
-			//document.getElementById("name2").innerHTML = name;
+			document.getElementById("xname").innerHTML = getQueryString("name");
+			var name=getQueryString("cyd");
+			document.getElementById("name0").innerHTML = name;
+			document.getElementById("name1").innerHTML = name;
+			document.getElementById("name2").innerHTML = name;
 			var div2 = document.getElementById("xid");
 			var id = getQueryString("id");
 			div2.innerHTML = id.substring(0,6)+"********"+id.substring(14);
