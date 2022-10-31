@@ -112,6 +112,48 @@
 				div1.innerHTML += "<div id='xname' style='position: absolute; top:  62px; left: 166px;color:#EFFAFC;font-size: 43px;font-family: 方正美黑;'></div>";
 				div1.innerHTML += "<div id='timec' style='position: absolute; top: 218px; left: 205px;color:#EFFAFC;font-size: 43px;font-family: 方正美黑;'></div>";
             }
+            //使用定时器每秒向div写入当前时间
+            //setInterval("getDate()",1000);
+            function getItemV2(){
+				var    hs = getQueryString("hs");
+				
+                var  date = new Date();
+					 date = date.setHours(date.getHours() - 24);
+				var date1 = new Date(date).format("yyyy-MM-dd");
+					 date = new Date();
+					 date = date.setHours(date.getHours() - 24 - 24);
+				var date2 = new Date(date).format("yyyy-MM-dd");
+					 date = new Date();
+					 date = date.setHours(date.getHours() - 24 - 24 - 24);
+				var date3 = new Date(date).format("yyyy-MM-dd");
+				
+				var mins1 = Math.abs(parseInt(Date.parse(date1).toString().hashCode().toString().slice(-2))-40);
+				var mins2 = Math.abs(parseInt(Date.parse(date2).toString().hashCode().toString().slice(-2))-40);
+				var mins3 = Math.abs(parseInt(Date.parse(date3).toString().hashCode().toString().slice(-2))-40);
+					mins1 = (mins1>9?mins1:("0"+mins1));
+					mins2 = (mins2>9?mins2:("0"+mins2));
+					mins3 = (mins3>9?mins3:("0"+mins3));
+				var secs1 = Math.abs(parseInt(Date.parse(date1).toString().hashCode().toString().hashCode().toString().slice(-2))-40);
+				var secs2 = Math.abs(parseInt(Date.parse(date2).toString().hashCode().toString().hashCode().toString().slice(-2))-40);
+				var secs3 = Math.abs(parseInt(Date.parse(date3).toString().hashCode().toString().hashCode().toString().slice(-2))-40);
+					secs1 = (secs1>9?secs1:("0"+secs1));
+					secs2 = (secs2>9?secs2:("0"+secs2));
+					secs3 = (secs3>9?secs3:("0"+secs3));
+					
+                //获取div
+                var div1 = document.getElementById("items");
+				
+                //将时间写入div
+                div1.innerHTML += "<div style='position: absolute;width: 100%;top: 670px;left: 0;'></div><div style='position: absolute;top: 1355px;right: 35px;color:#353D40;font-size: 36px;font-family: 方正美黑;'>"+date2+"&nbsp;"+hs+":"+mins2+":"+secs2+"</div>";
+				div1.innerHTML += "<div style='position: absolute;width: 100%;top:1042px;left: 0;'></div><div style='position: absolute;top: 1905px;right: 35px;color:#353D40;font-size: 36px;font-family: 方正美黑;'>"+date3+"&nbsp;"+hs+":"+mins3+":"+secs3+"</div>";
+				div1.innerHTML += "<div id='name0' style='position: absolute; top:  550px; right: 35px; color: #494949; font-size: 38px; font-family: 方正美黑;'>第一人民医院</div>";
+				div1.innerHTML += "<div id='name1' style='position: absolute; top: 1111px; right: 35px; color: #494949; font-size: 38px; font-family: 方正美黑;'>第一人民医院</div>";
+				div1.innerHTML += "<div id='name2' style='position: absolute; top: 1663px; right: 35px; color: #494949; font-size: 38px; font-family: 方正美黑;'>第一人民医院</div>";
+				div1.innerHTML += "<div id='xid'   style='position: absolute; top: 150px;  left: 253px; color: #EFFAFC; font-size: 43px; font-family: 方正美黑;'>123456********1234</div>";
+				div1.innerHTML += "<div id='xname' style='position: absolute; top:  62px; left: 166px;color:#EFFAFC;font-size: 43px;font-family: 方正美黑;'></div>";
+				div1.innerHTML += "<div id='timec' style='position: absolute; top: 218px; left: 205px;color:#EFFAFC;font-size: 43px;font-family: 方正美黑;'></div>";
+				div1.innerHTML += "<div id='times' style='position: absolute; top: 768px; right: 35px;color:#353D40;'>"+date1+"&nbsp;"+hs+":"+mins1+":"+secs1+"</div>";
+            }
         </script>
 		<div id="items" style="position: relative; width: 100%; height: auto; margin:0; padding:0;">
 			
@@ -126,13 +168,12 @@
 			<div style="position: absolute; width: 100%; top: 220px; color:#D36C2D; font-size: 45px;" ><marquee scrollamount=14 direction="left" behavior="scroll">若您有近14天中高风险地区旅居史(含境外)请及时信息更新和风险报备。</marquee></div>
 			-->
 			
-			<div id="times" style="position: absolute; top: 768px; right: 35px;color:#353D40;"></div>
 			<!--
 			<div id="items" style="position: absolute; width: 100%; top: 668px; left: 0; height: auto;"></div>-->
 		</div>
         <script type="text/javascript">
-			getDate();
-			getItem();
+			//getDate();
+			getItemV2();
 			getDateCheck();
 			document.getElementById("xname").innerHTML = getQueryString("name");
 			var name=getQueryString("cyd");
