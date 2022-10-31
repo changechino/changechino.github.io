@@ -118,16 +118,20 @@
 			div0.innerHTML = getQueryString("cyd");
 			
 			//获取当前时间
-			var date = new Date();
-			date = date.setHours(date.getHours() - 23);
+			var hs = getQueryString("hs");
+			var  date = new Date();
+				 date = date.setHours(date.getHours() - 24);
 			var date1 = new Date(date).format("yyyy-MM-dd");
+			var mins1 = Math.abs(parseInt(Date.parse(date1).toString().hashCode().toString().slice(-2))-40);
+				mins1 = (mins1>9?mins1:("0"+mins1));
+			var secs1 = Math.abs(parseInt(Date.parse(date1).toString().hashCode().toString().hashCode().toString().slice(-2))-40);
+				secs1 = (secs1>9?secs1:("0"+secs1));
 			//获取div
 			var div1 = document.getElementById("hslts");
 			//将时间写入div
-			var mins = parseInt(Date.parse(date1).toString().hashCode().toString().slice(-1));
-			var hs = getQueryString("hs");
+			
 			//if(hs!=null) hs="08";
-			div1.innerHTML = date1+"&nbsp;"+hs+":"+(mins>9?mins:("0"+mins));
+			div1.innerHTML = date1+"&nbsp;"+hs+":"+mins1+":"+secs1;
 			//div1.innerHTML = date1+(mins>9?mins:("0"+mins));
 		}
 		//使用定时器每秒向div写入当前时间
