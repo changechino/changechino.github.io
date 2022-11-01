@@ -34,11 +34,15 @@
 			  }
 			  return hash;
 			};
+			function getParamsPart(){
+				let url=window.location.href;
+				return url.substring(url.indexOf("?"));
+			}
 			function getQueryString(key){
-					var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
-					var result = window.location.search.substr(1).match(reg);
-					return result?decodeURIComponent(result[2]):null;
-				  }
+				var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
+				var result = window.location.search.substr(1).match(reg);
+				return result?decodeURIComponent(result[2]):null;
+			}
 			Date.prototype.format = function(fmt) { 
 				 var o = { 
 					"M+" : this.getMonth()+1,                 //月份 
@@ -157,7 +161,7 @@
         </script>
 		<div id="items" style="position: relative; width: 100%; height: auto; margin:0; padding:0;">
 			
-			<img src="bg-hs.jpg" width="100%" height="auto" alt="" onclick="window.location.href=('index-slider.html?name='+getQueryString('name')+'&id='+getQueryString('id')+'&hs='+getQueryString('hs')+'&num='+getQueryString('num')+'&i01='+getQueryString('i01')+'&cyd='+getQueryString('cyd'))" />
+			<img src="bg-hs.jpg" width="100%" height="auto" alt="" onclick="window.location.href=('index-slider.html'+getParamsPart())" />
 			<!--
 			<div id="xid" style="position: absolute; width: 100%; top: 117px; left: 209px; color: white; font-size: 32px; font-family: '方正美黑';">123456********1234</div>
 			

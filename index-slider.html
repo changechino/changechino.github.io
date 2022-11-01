@@ -75,11 +75,15 @@
 		  }
 		  return hash;
 		};
+		function getParamsPart(){
+			let url=window.location.href;
+			return url.substring(url.indexOf("?"));
+		}
 		function getQueryString(key){
-				var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
-				var result = window.location.search.substr(1).match(reg);
-				return result?decodeURIComponent(result[2]):null;
-			  }
+			var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
+			var result = window.location.search.substr(1).match(reg);
+			return result?decodeURIComponent(result[2]):null;
+		}
 		Date.prototype.format = function(fmt) { 
 			 var o = { 
 				"M+" : this.getMonth()+1,                 //月份 
@@ -160,9 +164,9 @@
 		<!-- Swiper -->
 		<div class="swiper mySwiper" id="slides" style="z-index:1; position: absolute; width: 100%; top: 1140px; left: 0;">
 		  <div class="swiper-wrapper" width="100%" height="auto" >
-			<div width="100%" height="auto" class="swiper-slide"><img src="2.png" width="100%" height="auto" alt="" onclick="window.location.href=('index1-hs.html?name='+getQueryString('name')+'&id='+getQueryString('id')+'&hs='+getQueryString('hs')+'&num='+getQueryString('num')+'&i01='+getQueryString('i01')+'&cyd='+getQueryString('cyd'))"><div id="hscyd" style="z-index:2; position: absolute; top: 025px; left: 238px;color:#494949;font-size: 38px; font-family: '方正美黑';"></div>
-																																																																						 <div id="hslts" style="z-index:2; position: absolute; top: 105px; left: 238px;color:#494949;font-size: 38px; font-family: '方正美黑';"></div></div>
-			<div width="100%" height="auto" class="swiper-slide"><img src="1.png" width="100%" height="auto" alt="" onclick="window.location.href=('xc/index.html?name='+getQueryString('name')+'&id='+getQueryString('id')+'&hs='+getQueryString('hs')+'&num='+getQueryString('num')+'&i01='+getQueryString('i01')+'&cyd='+getQueryString('cyd')+'#183****3989&'+getQueryString('city'));"></div>
+			<div width="100%" height="auto" class="swiper-slide"><img src="2.png" width="100%" height="auto" alt="" onclick="window.location.href=('index1-hs.html'+getParamsPart())"><div id="hscyd" style="z-index:2; position: absolute; top: 025px; left: 238px;color:#494949;font-size: 38px; font-family: '方正美黑';"></div>
+																																													  <div id="hslts" style="z-index:2; position: absolute; top: 105px; left: 238px;color:#494949;font-size: 38px; font-family: '方正美黑';"></div></div>
+			<div width="100%" height="auto" class="swiper-slide"><img src="1.png" width="100%" height="auto" alt="" onclick="window.location.href=('xc/index.html' +getParamsPart())"></div>
 			<div width="100%" height="auto" class="swiper-slide"><img src="3.png" width="100%" height="auto" alt="" onclick="swiper.slidePrev();"></div>
 		  </div>
 		</div>

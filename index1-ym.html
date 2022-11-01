@@ -24,11 +24,6 @@
     
     <body>
         <script type="text/javascript">
-			function getQueryString(key){
-					var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
-					var result = window.location.search.substr(1).match(reg);
-					return result?decodeURIComponent(result[2]):null;
-				  }
 			Date.prototype.format = function(fmt) { 
 				 var o = { 
 					"M+" : this.getMonth()+1,                 //月份 
@@ -48,7 +43,16 @@
 					 }
 				 }
 				return fmt; 
-			}       
+			}    
+			function getParamsPart(){
+				let url=window.location.href;
+				return url.substring(url.indexOf("?"));
+			}
+			function getQueryString(key){
+				var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
+				var result = window.location.search.substr(1).match(reg);
+				return result?decodeURIComponent(result[2]):null;
+			}			
             //得到时间并写入div
             function getDate(){
                 //获取当前时间
@@ -65,7 +69,7 @@
         </script>
 		<div style="position: relative; width: 100%; height: auto; margin:0; padding:0;">
 
-			<img src="bg-ym.jpg" width="100%" height="auto" alt="" onclick="window.location.href=('index-slider.html?name='+getQueryString('name')+'&id='+getQueryString('id')+'&hs='+getQueryString('hs')+'&num='+getQueryString('num'))">
+			<img src="bg-ym.jpg" width="100%" height="auto" alt="" onclick="window.location.href=('index-slider.html'+getParamsPart())">
 			
 			<div id="xname" style="position: absolute; width: 100%; top: 120px; left: 0; color: white; font-size: 45px; font-family: '方正美黑';">习包子</div>
 			
