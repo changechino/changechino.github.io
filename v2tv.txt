@@ -1,1 +1,1 @@
-vless://90cb477d-708f-4bd3-8941-caafff291a7f@36.139.131.111:32920?security=reality&encryption=none&pbk=4wQ4w2dgR8zDaH8SSNd4UGC-OEy0iRWPvVPVI6AMOVk&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.akamonkai.ac.jp&sid=a96d6633b3f2bfde#%F0%9F%87%AF%F0%9F%87%B5%E6%97%A5%E6%9C%AC02
+trojan://04b51af8-4b0d-371c-828c-1d07eef11e2f@ddns2.xn--mcss7n5v3agfc.com:28451/?sni=ydcvfvv12.sayun.xyz#%F0%9F%87%AD%F0%9F%87%B0%20v1%E4%B8%A8%E9%A6%99%E6%B8%AF%E4%B8%A8%E5%BE%AE%E8%BD%AF%E4%B8%A8AZ%E4%B8%A87%E4%B8%A8%E8%A7%A3%E9%94%81%E6%B5%81%E5%AA%92%E4%BD%93
