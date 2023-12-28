@@ -1,1 +1,1 @@
-vless://dc4a5590-45be-4565-97d6-36d1cce35b97@108.181.24.55:443?security=reality&encryption=none&pbk=g_u2WcbFYrjQ-d7gLGQAQ2yGSPHm1fm_FG3Oj55PCEs&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=cp501.prod.do.dsp.mp.microsoft.com&sid=85372ec8a9ed684a#%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E9%AB%98%E9%80%9F03
+vless://dc4a5590-45be-4565-97d6-36d1cce35b97@jp3.lxjc.app:443?security=tls&encryption=none&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=16-163-218-240.nhost.00cdn.com#%F0%9F%87%AF%F0%9F%87%B5%E4%BA%9A%E9%A9%AC%E9%80%8A%E6%97%A5%E6%9C%AC3
