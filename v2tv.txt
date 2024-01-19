@@ -1,1 +1,1 @@
-vless://dc4a5590-45be-4565-97d6-36d1cce35b97@jp3.lxjc.app:443?security=tls&encryption=none&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=16-163-218-240.nhost.00cdn.com#%F0%9F%87%AF%F0%9F%87%B5%E4%BA%9A%E9%A9%AC%E9%80%8A%E6%97%A5%E6%9C%AC3
+vless://e785fd8b-c0c3-4e2b-b613-edfd1ec67fee@jp3.lxjc.app:443?security=tls&encryption=none&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=16-163-218-240.nhost.00cdn.com#%F0%9F%87%AF%F0%9F%87%B5%E4%BA%9A%E9%A9%AC%E9%80%8A%E6%97%A5%E6%9C%AC3
