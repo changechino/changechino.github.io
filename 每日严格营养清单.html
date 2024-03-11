@@ -828,3 +828,160 @@
 <li><a href="/wiki/%E7%BB%B4%E7%94%9F%E7%B4%A0D" title="维生素D">维生素D</a>：1国际单位（IU） = 25 ng维生素D3（晶体） = 1 USP = 1 <a href="/w/index.php?title=%E5%9B%BD%E9%99%85%E9%9B%8F%E9%B8%A1%E5%8D%95%E4%BD%8D&amp;action=edit&amp;redlink=1" class="new" title="国际雏鸡单位（页面不存在）">ICU</a></li>
 <li><a href="/wiki/%E7%BB%B4%E7%94%9F%E7%B4%A0E" title="维生素E">维生素E</a>：1国际单位（IU） = 0.667 mg (2/3 mg) D-α-<a href="/wiki/%E7%94%9F%E8%82%B2%E9%85%9A" title="生育酚">生育酚</a>醋酸酯 = 1 mg DL-α-<a href="/wiki/%E7%94%9F%E8%82%B2%E9%85%9A" title="生育酚">生育酚</a>醋酸酯 = 1 USP</li>
 <li><a href="/wiki/%E9%9D%92%E9%9C%89%E7%B4%A0" title="青霉素">青霉素</a>：1国际单位（IU） = 0.60μg结晶青霉素G钠盐 ＝ 0.625μg结晶青霉素G钾盐<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></li></ul>
+
+
+
+
+
+
+<script>
+  // 获取 t1 表格
+  var table1 = document.getElementById("t1");
+
+  // 获取 t2 表格
+  var table2 = document.getElementById("t3");
+
+  // 获取 t1 表格中的所有行
+  var rows1 = table1.getElementsByTagName("tr");
+
+  // 获取 t2 表格中的所有行
+  var rows2 = table2.getElementsByTagName("tr");
+
+  // 遍历 t2 表格的每一行
+  for (var i = 2; i < rows2.length; i++) {
+    // 获取 t1 表格对应行的最后一个单元格
+    var lastCell1 = rows1[i-1].getElementsByTagName("td").item(rows1[i].getElementsByTagName("td").length - 1);
+
+    // 获取 t2 表格对应行的最后一个单元格
+    var lastCell2 = rows2[i].getElementsByTagName("td").item(rows2[i].getElementsByTagName("td").length - 1);
+
+    // 如果 t1 表格对应行的最后一个单元格存在，则将 t2 表格对应行的最后一个单元格的内容替换为 t1 表格对应行的最后一个单元格的内容
+    if (lastCell2) {
+      lastCell2.textContent = lastCell1.textContent;
+    }
+  }
+  // 获取 t1 表格
+  var table1 = document.getElementById("t1");
+
+  // 获取 t2 表格
+  var table2 = document.getElementById("t4");
+
+  // 获取 t1 表格中的所有行
+  var rows1 = table1.getElementsByTagName("tr");
+
+  // 获取 t2 表格中的所有行
+  var rows2 = table2.getElementsByTagName("tr");
+
+  // 遍历 t2 表格的每一行
+  for (var i = 15; i < rows1.length; i++) {
+    // 获取 t1 表格对应行的最后一个单元格
+    var lastCell1 = rows1[i].getElementsByTagName("td").item(rows1[i].getElementsByTagName("td").length - 1);
+
+    // 获取 t2 表格对应行的最后一个单元格
+    var lastCell2 = rows2[i-13].getElementsByTagName("td").item(rows2[i-13].getElementsByTagName("td").length - 1);
+
+    // 如果 t1 表格对应行的最后一个单元格存在，则将 t2 表格对应行的最后一个单元格的内容替换为 t1 表格对应行的最后一个单元格的内容
+    if (lastCell2) {
+      lastCell2.textContent = lastCell1.textContent;
+    }
+  }
+  // 获取表格
+  var table = document.getElementById("t1");
+
+  // 获取表格中的所有行
+  var rows = table.getElementsByTagName("tr");
+
+  // 从第二行开始遍历每一行
+  for (var i = 1; i < rows.length; i++) {
+    // 获取当前行的单元格
+    var cells = rows[i].getElementsByTagName("td");
+
+    // 获取UL、RDA/AI、当前剂量的值
+    var ulValue = cells[3].textContent.trim().toLowerCase();
+    var rdaAiValue = cells[2].textContent.trim().toLowerCase();
+    var currentDoseValue = cells[5].textContent.trim().toLowerCase();
+
+    // 根据条件改变行颜色
+    if (currentDoseValue === "") {
+      rows[i].style.backgroundColor = "";
+    } else if (ulValue === "未定" || ulValue === "nd") {
+      rows[i].style.backgroundColor = "lightblue";
+    } else if (
+      currentDoseValue > parseFloat(ulValue) ||
+      currentDoseValue < parseFloat(rdaAiValue)
+    ) {
+      rows[i].style.backgroundColor = "pink";
+    } else if (
+      currentDoseValue <= parseFloat(ulValue) &&
+      currentDoseValue >= parseFloat(rdaAiValue)
+    ) {
+      rows[i].style.backgroundColor = "lightgreen";
+    }
+  }
+  // 获取表格
+  var table = document.getElementById("t3");
+
+  // 获取表格中的所有行
+  var rows = table.getElementsByTagName("tr");
+
+  // 从第二行开始遍历每一行
+  for (var i = 2; i < rows.length; i++) {
+    // 获取当前行的单元格
+    var cells = rows[i].getElementsByTagName("td");
+
+    // 获取UL、RDA/AI、当前剂量的值
+    var ulValue = cells[4].textContent.trim().toLowerCase();
+    var rdaAiValue = cells[3].textContent.trim().toLowerCase();
+    var currentDoseValue = cells[6].textContent.trim().toLowerCase();
+
+    // 根据条件改变行颜色
+    if (currentDoseValue === "") {
+      rows[i].style.backgroundColor = "";
+    } else if (ulValue === "未定" || ulValue === "nd") {
+      rows[i].style.backgroundColor = "lightblue";
+    } else if (
+      currentDoseValue > parseFloat(ulValue) ||
+      currentDoseValue < parseFloat(rdaAiValue)
+    ) {
+      rows[i].style.backgroundColor = "pink";
+    } else if (
+      currentDoseValue <= parseFloat(ulValue) &&
+      currentDoseValue >= parseFloat(rdaAiValue)
+    ) {
+      rows[i].style.backgroundColor = "lightgreen";
+    }
+  }
+  // 获取表格
+  var table = document.getElementById("t4");
+
+  // 获取表格中的所有行
+  var rows = table.getElementsByTagName("tr");
+
+  // 从第二行开始遍历每一行
+  for (var i = 2; i < rows.length; i++) {
+    // 获取当前行的单元格
+    var cells = rows[i].getElementsByTagName("td");
+
+    // 获取UL、RDA/AI、当前剂量的值
+    var ulValue = cells[4].textContent.trim().toLowerCase();
+    var rdaAiValue = cells[3].textContent.trim().toLowerCase();
+    var currentDoseValue = cells[6].textContent.trim().toLowerCase();
+
+    // 根据条件改变行颜色
+    if (currentDoseValue === "") {
+      rows[i].style.backgroundColor = "";
+    } else if (ulValue === "未定" || ulValue === "nd") {
+      rows[i].style.backgroundColor = "lightblue";
+    } else if (
+      currentDoseValue > parseFloat(ulValue) ||
+      currentDoseValue < parseFloat(rdaAiValue)
+    ) {
+      rows[i].style.backgroundColor = "pink";
+    } else if (
+      currentDoseValue <= parseFloat(ulValue) &&
+      currentDoseValue >= parseFloat(rdaAiValue)
+    ) {
+      rows[i].style.backgroundColor = "lightgreen";
+    }
+  }
+</script>
