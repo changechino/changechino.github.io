@@ -985,32 +985,22 @@
             popup.style.left = (trigger.offsetLeft + trigger.offsetWidth) + "px";
             popup.style.top = trigger.offsetTop + "px";
 
-            // 设置Google链接
-            var goLink = document.getElementById("goLink");
-            goLink.href = "https://www.google.com/search?q=" + encodeURIComponent(trigger.innerText);
-
-            // 设置YouTube链接
-            var ytLink = document.getElementById("ytLink");
-            ytLink.href = "https://www.youtube.com/results?search_query=" + encodeURIComponent(trigger.innerText);
-
-            // 设置iHerb链接
-            var hbLink = document.getElementById("hbLink");
-            hbLink.href = "https://cn.iherb.com/search?sr=2&kw=" + encodeURIComponent(trigger.innerText);
-
-            // 设置Wikipedia链接
-            var wkLink = document.getElementById("wkLink");
-            wkLink.href = "https://zh.wikipedia.org/wiki/" + encodeURIComponent(trigger.innerText);
-
-            // 设置Dr. Berg链接
-            var drLink = document.getElementById("drLink");
-            drLink.href = "https://www.youtube.com/@drbergchinese/search?query=" + encodeURIComponent(trigger.innerText);
+            // 设置链接的href属性
+            var searchText = encodeURIComponent(trigger.innerText);
+            document.getElementById("goLink").href = "https://www.google.com/search?q=" + searchText;
+            document.getElementById("hbLink").href = "https://cn.iherb.com/search?sr=2&kw=" + searchText;
+            document.getElementById("wkLink").href = "https://zh.wikipedia.org/wiki/" + searchText;
+            document.getElementById("ytLink").href = "https://www.youtube.com/results?search_query=" + searchText;
+            document.getElementById("drLink").href = "https://www.youtube.com/@drbergchinese/search?query=" + searchText;
         });
     });
 
-    // 在弹出框上绑定移出事件处理程序
-    var popup = document.getElementById("popup");
-    popup.addEventListener("mouseleave", function() {
-        popup.style.display = "none";
+    // 点击文档其他地方隐藏弹出列表
+    document.addEventListener("click", function(event) {
+        var isClickInside = popup.contains(event.target);
+        if (!isClickInside) {
+            popup.style.display = "none";
+        }
     });
   function dr(element){location="https://www.youtube.com/@drbergchinese/search?query="+element.textContent;}
   function go(element){location="https://www.google.com/search?q="+element.textContent;}
