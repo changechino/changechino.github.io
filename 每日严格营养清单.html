@@ -995,9 +995,14 @@
         });
     });
 
-    // 点击文档其他地方隐藏弹出列表
+   // 点击文档其他地方隐藏弹出列表
     document.addEventListener("click", function(event) {
-        var isClickInside = popup.contains(event.target);
+        var isClickInside = false;
+        triggers.forEach(function(trigger) {
+            if (trigger.contains(event.target)) {
+                isClickInside = true;
+            }
+        });
         if (!isClickInside) {
             popup.style.display = "none";
         }
