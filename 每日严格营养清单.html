@@ -933,7 +933,7 @@
 植物營養素：
 許多植物營養素是脂溶性的，這是在沙拉中加入橄欖油非常棒的原因，因為它有助於植物營養素的吸收。隨餐吃植物營養素補充劑和小麥草汁，吸收會更好。
 
-甜菜鹼鹽酸鹽：
+<a class="pt" href="javascript:;">甜菜鹼鹽酸鹽</a>：
 飯前服用。
 
 消化酵素：
@@ -943,20 +943,20 @@
 飯後立即服用。
 
 空腹吃：
-1. <a onclick="dr(this)" ondblclick="wk(this)" href="javascript:;">牛磺熊去氧胆酸</a>(TUDCA)
+1. <a class="pt" href="javascript:;">牛磺熊去氧胆酸</a>(TUDCA)
 2. 活性炭Activated charcoal
 3. 膨潤土Bentonite clay
 4. 個別胺基酸Individual amino acids
 5. 微量礦物質
 
 睡前吃：
-1. <a onclick="dr(this)" ondblclick="wk(this)" href="javascript:;">鈣</a>
-2. <a onclick="dr(this)" ondblclick="wk(this)" href="javascript:;">鎂</a>
-3. 益生菌
+1. <a class="pt" href="javascript:;">鈣</a>
+2. <a class="pt" href="javascript:;">鎂</a>
+3. <a class="pt" href="javascript:;">益生菌</a>
 4. 維生素D3
 5. 維生素B1
 6. 排毒草藥Detox herbs
-7. 蘋果醋
+7. <a class="pt" href="javascript:;">蘋果醋</a>
 
 早上吃：
   • 電解質粉
@@ -964,7 +964,54 @@
   • 具刺激性的草藥（Stimulatory herbs）： 人蔘、Maca瑪卡
 </div>
 
+<div id="popup" style="display: none; position: absolute; background-color: #fff; border: 1px solid #ccc; padding: 5px;">
+	<a id="drLink" href="#" target="_blank">Dr. Berg</a><br>
+	<a id="goLink" href="#" target="_blank">Google</a><br>
+	<a id="hbLink" href="#" target="_blank">iHerb</a><br>
+	<a id="wkLink" href="#" target="_blank">Wikipedia</a><br>
+	<a id="ytLink" href="#" target="_blank">YouTube</a>
+</div>
+
 <script>
+    // 获取所有触发器元素
+    var triggers = document.querySelectorAll(".pt");
+
+    // 为每个触发器添加事件监听器
+    triggers.forEach(function(trigger) {
+        trigger.addEventListener("mouseover", function() {
+            // 显示弹出框
+            var popup = document.getElementById("popup");
+            popup.style.display = "block";
+            popup.style.left = (trigger.offsetLeft + trigger.offsetWidth) + "px";
+            popup.style.top = trigger.offsetTop + "px";
+
+            // 设置Google链接
+            var goLink = document.getElementById("goLink");
+            goLink.href = "https://www.google.com/search?q=" + encodeURIComponent(trigger.innerText);
+
+            // 设置YouTube链接
+            var ytLink = document.getElementById("ytLink");
+            ytLink.href = "https://www.youtube.com/results?search_query=" + encodeURIComponent(trigger.innerText);
+
+            // 设置iHerb链接
+            var hbLink = document.getElementById("hbLink");
+            hbLink.href = "https://cn.iherb.com/search?sr=2&kw=" + encodeURIComponent(trigger.innerText);
+
+            // 设置Wikipedia链接
+            var wkLink = document.getElementById("wkLink");
+            wkLink.href = "https://zh.wikipedia.org/wiki/" + encodeURIComponent(trigger.innerText);
+
+            // 设置Dr. Berg链接
+            var drLink = document.getElementById("drLink");
+            drLink.href = "https://www.youtube.com/@drbergchinese/search?query=" + encodeURIComponent(trigger.innerText);
+        });
+    });
+
+    // 在弹出框上绑定移出事件处理程序
+    var popup = document.getElementById("popup");
+    popup.addEventListener("mouseleave", function() {
+        popup.style.display = "none";
+    });
   function dr(element){location="https://www.youtube.com/@drbergchinese/search?query="+element.textContent;}
   function go(element){location="https://www.google.com/search?q="+element.textContent;}
   function hb(element){location="https://cn.iherb.com/search?sr=2&kw="+element.textContent;}
