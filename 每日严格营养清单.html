@@ -1003,8 +1003,10 @@
             // 显示弹出框
             var popup = document.getElementById("popup");
             popup.style.display = "block";
-            popup.style.left = (trigger.offsetLeft + trigger.offsetWidth) + "px";
-            popup.style.top = trigger.offsetTop + "px";
+            // 获取触发器元素相对于文档的偏移量
+            var triggerAbsoluteOffset = trigger.getBoundingClientRect();
+            popup.style.left = (triggerAbsoluteOffset.left + trigger.offsetWidth) + "px";
+            popup.style.top = triggerAbsoluteOffset.top + "px";
 
             // 设置链接的href属性
             var searchText = encodeURIComponent(trigger.innerText);
