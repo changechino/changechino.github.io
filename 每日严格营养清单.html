@@ -1005,8 +1005,10 @@
             popup.style.display = "block";
             // 获取触发器元素相对于文档的偏移量
             var triggerAbsoluteOffset = trigger.getBoundingClientRect();
-            popup.style.left = (triggerAbsoluteOffset.left + trigger.offsetWidth) + "px";
-            popup.style.top = triggerAbsoluteOffset.top + "px";
+            var scrollX = window.scrollX || window.pageXOffset;
+            var scrollY = window.scrollY || window.pageYOffset;
+            popup.style.left = (triggerAbsoluteOffset.left + scrollX + trigger.offsetWidth) + "px";
+            popup.style.top = (triggerAbsoluteOffset.top + scrollY) + "px";
 
             // 设置链接的href属性
             var searchText = encodeURIComponent(trigger.innerText);
