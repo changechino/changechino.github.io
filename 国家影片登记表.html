@@ -7020,13 +7020,10 @@
 </table>
 </div>
 <div id="popup" style="display: none; position: absolute; background-color: #fff; border: 1px solid #ccc; padding: 5px;">
-	<a id="drLink" href="#" target="_blank">Dr. Berg</a><br>
-	<a id="ydLink" href="#" target="_blank">DIY</a><br>
-	<a id="goLink" href="#" target="_blank">Google</a><br>
-	<a id="hbLink" href="#" target="_blank">iHerb</a><br>
-	<a id="sdLink" href="#" target="_blank">ShopDr.B</a><br>
+	<a id="nnLink" href="#" target="_blank">努努</a><br>
+	<a id="xsLink" href="#" target="_blank">线上看</a><br>
 	<a id="wkLink" href="#" target="_blank">Wikipedia</a><br>
-	<a id="whLink" href="#" target="_blank">wikiHow</a><br>
+	<a id="gwLink" href="#" target="_blank">百科</a><br>
 	<a id="ytLink" href="#" target="_blank">YouTube</a>
 </div>
 <style>
@@ -7053,14 +7050,12 @@
 
             // 设置链接的href属性
             var searchText = encodeURIComponent(trigger.innerText);
-            document.getElementById("goLink").href = "https://www.google.com/search?q=" + searchText;
-            document.getElementById("hbLink").href = "https://cn.iherb.com/search?sr=2&kw=" + searchText;
+	http://google.com/search?q=%s+线上看
+            document.getElementById("nnLink").href = "http://google.com/search?q=努努+" + searchText;
+            document.getElementById("xsLink").href = "https://www.google.com/search?q=线上看+" + searchText;
             document.getElementById("wkLink").href = "https://zh.wikipedia.org/wiki/" + searchText;
-            document.getElementById("ytLink").href = "https://www.youtube.com/results?search_query=" + searchText;
-            document.getElementById("drLink").href = "https://www.youtube.com/@drbergchinese/search?query=" + searchText;
-            document.getElementById("ydLink").href = "https://www.youtube.com/results?search_query=DIY+" + searchText;
-            document.getElementById("whLink").href = "https://www.google.com/search?q=wikiHow+" + searchText;
-            document.getElementById("sdLink").href = "https://shop.drberg.com/catalogsearch/result?q=" + searchText;
+            document.getElementById("gwLink").href = "https://www.google.com/search?q=百科+" + searchText;
+            document.getElementById("ytLink").href = "https://www.youtube.com/results?sp=EgIYAg%253D%253D&search_query=" + searchText;
         });
     });
 
