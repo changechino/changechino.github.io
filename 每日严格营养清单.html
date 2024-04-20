@@ -1412,6 +1412,9 @@ o	白癜风，又称白蚀症（vitiligo）
     var rdaAiValue = cells[2].textContent.trim().toLowerCase();
     var currentDoseValue = cells[5].textContent.trim().toLowerCase();
 
+    if (ulValue === "未定" || ulValue === "nd")
+      ulValue = Number.MAX_VALUE;
+
     // 根据条件改变行颜色
     if (currentDoseValue === "") {
       rows[i].style.backgroundColor = "";
@@ -1444,6 +1447,9 @@ o	白癜风，又称白蚀症（vitiligo）
     var ulValue = cells[4].textContent.trim().toLowerCase();
     var rdaAiValue = cells[3].textContent.trim().toLowerCase();
     var currentDoseValue = cells[6].textContent.trim().toLowerCase();
+ 
+    if (ulValue === "未定" || ulValue === "nd")
+      ulValue = Number.MAX_VALUE;
 
     // 根据条件改变行颜色
     if (currentDoseValue === "") {
@@ -1477,6 +1483,9 @@ o	白癜风，又称白蚀症（vitiligo）
     var ulValue = cells[4].textContent.trim().toLowerCase();
     var rdaAiValue = cells[3].textContent.trim().toLowerCase();
     var currentDoseValue = cells[6].textContent.trim().toLowerCase();
+
+    if (ulValue === "未定" || ulValue === "nd")
+      ulValue = Number.MAX_VALUE;
 
     // 根据条件改变行颜色
     if (currentDoseValue === "") {
