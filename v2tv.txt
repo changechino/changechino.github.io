@@ -1,1 +1,1 @@
-vless://2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5@1.232.40.93:12203/?type=ws&encryption=none&host=cfed.tgzdyz2.top&path=tg%40zdyz2&security=tls&sni=cfed.tgzdyz2.top#KR_youtube%40%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB%E5%B8%88_125
+vmess://eyJhZGQiOiIyMy5hY2hlbnh0eS50b3AiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiYjJiMDg3MzYtM2YxMy0zMjBlLWI2MWQtMzkwNzdiNzkwNmVmIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIxMTYyMyIsInBzIjoi44mR6aaZ5rivIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
