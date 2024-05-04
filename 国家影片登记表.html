@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <a href="https://zh.wikipedia.org/wiki/国家影片登记表">国家影片登记表</a>
 <div style="font-size:22px;-moz-tab-size:6;tab-size:6;white-space:pre;margin-top:-1.0em;">
-<table class="wikitable sortable jquery-tablesorter">
+<table id="myTable" class="wikitable sortable jquery-tablesorter">
 	<thead>
 		<tr>
 			<th class="headerSort" role="columnheader button" tabindex="0" title="升序排列">译名</th>
@@ -10,7 +10,7 @@
 			<th class="headerSort" role="columnheader button" tabindex="0" title="升序排列">类型</th>
 			<th class="headerSort" role="columnheader button" tabindex="0" title="升序排列">上映年份</th>
 			<th class="headerSort headerSortDown" role="columnheader button" tabindex="0" title="原始排序">收录年份</th>
-			<th class="headerSort" role="columnheader button" tabindex="0" title="升序排列">来源</th>
+			<th class="headerSort" role="columnheader button" tabindex="0" title="升序排列"><a onclick="sortTable()" href="javascript:;">来源</a></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -7073,4 +7073,40 @@
             popup.style.display = "none";
         }
     });
+	function sortTable() {
+	  var table, rows, switching, i, x, y, shouldSwitch;
+	  table = document.getElementById("myTable");
+	  switching = true;
+	  /* Make a loop that will continue until
+	  no switching has been done: */
+	  while (switching) {
+		// Start by saying: no switching is done:
+		switching = false;
+		rows = table.rows;
+		/* Loop through all table rows (except the
+		first, which contains table headers): */
+		for (i = 1; i < (rows.length - 1); i++) {
+		  // Start by saying there should be no switching:
+		  shouldSwitch = false;
+		  /* Get the two elements you want to compare,
+		  one from current row and one from the next: */
+		  x1 = rows[i].getElementsByTagName("TD")[3].textContent.trim();
+		  y1 = rows[i].getElementsByTagName("TD")[4].textContent.trim();
+		  x2 = rows[i + 1].getElementsByTagName("TD")[3].textContent.trim();
+		  y2 = rows[i + 1].getElementsByTagName("TD")[4].textContent.trim();
+		  // Check if the two rows should switch place:
+		  if ((parseFloat(y1)-parseFloat(x1)) > (parseFloat(y2)-parseFloat(x2))) {
+			// If so, mark as a switch and break the loop:
+			shouldSwitch = true;
+			break;
+		  }
+		}
+		if (shouldSwitch) {
+		  /* If a switch has been marked, make the switch
+		  and mark that a switch has been done: */
+		  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+		  switching = true;
+		}
+	  }
+	}
 </script>
