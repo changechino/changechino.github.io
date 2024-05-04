@@ -7050,7 +7050,7 @@
 
             // 设置链接的href属性
             // var searchText = encodeURIComponent(trigger.innerText);
-            var title = trigger.parentElement.parentElement.cells[0].innerText;
+            var title = trigger.innerText;
             var year = trigger.parentElement.parentElement.cells[3].innerText;
             var searchText = encodeURIComponent(title + " " + year);
             document.getElementById("nnLink").href = "http://google.com/search?q=努努影院+" + searchText;
