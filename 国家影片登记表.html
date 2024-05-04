@@ -7049,8 +7049,10 @@
             popup.style.top = (triggerAbsoluteOffset.top + scrollY) + "px";
 
             // 设置链接的href属性
-            var searchText = encodeURIComponent(trigger.innerText);
-	http://google.com/search?q=%s+线上看
+            // var searchText = encodeURIComponent(trigger.innerText);
+            var title = trigger.parentElement.parentElement.cells[0].innerText;
+            var year = trigger.parentElement.parentElement.cells[3].innerText;
+            var searchText = encodeURIComponent(title + " " + year);
             document.getElementById("nnLink").href = "http://google.com/search?q=努努影院+" + searchText;
             document.getElementById("xsLink").href = "https://www.google.com/search?q=线上看+" + searchText;
             document.getElementById("wkLink").href = "https://zh.wikipedia.org/wiki/" + searchText;
