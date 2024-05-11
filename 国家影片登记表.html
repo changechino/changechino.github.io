@@ -7052,10 +7052,11 @@
             // var searchText = encodeURIComponent(trigger.innerText);
             var title = trigger.innerText;
             var year = trigger.parentElement.parentElement.cells[3].innerText;
+            var searchWiki = encodeURIComponent(title);
             var searchText = encodeURIComponent(title + " " + year);
             document.getElementById("nnLink").href = "http://google.com/search?q=努努影院+" + searchText;
             document.getElementById("xsLink").href = "https://www.google.com/search?q=线上看+" + searchText;
-            document.getElementById("wkLink").href = "https://zh.wikipedia.org/wiki/" + searchText;
+            document.getElementById("wkLink").href = "https://zh.wikipedia.org/wiki/" + searchWiki;
             document.getElementById("gwLink").href = "https://www.google.com/search?q=百科+" + searchText;
             document.getElementById("ytLink").href = "https://www.youtube.com/results?sp=EgIYAg%253D%253D&search_query=" + searchText;
         });
