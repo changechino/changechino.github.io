@@ -1,5 +1,7 @@
 <title>每日严格营养清单</title>
 <meta name="viewport" content="width=device-width"/>
+<body style="background-color:#555;">
+<div id="00" style="background-color:white;padding:10px">
 <div style="font-size:22px;-moz-tab-size:6;tab-size:6;white-space:pre-wrap;margin-top:-1.0em;">
 起床时空腹
 	1粒 	<a href="商品详细信息.html#05">α-硫辛酸</a>
@@ -1356,7 +1358,7 @@ o	白癜风，又称白蚀症（vitiligo）
 	<a id="wkLink" href="#" target="_blank">Wikipedia</a><br>
 	<a id="whLink" href="#" target="_blank">wikiHow</a><br>
 	<a id="ytLink" href="#" target="_blank">YouTube</a>
-</div>
+</div></div></body>
 
 <script>
     // 获取所有触发器元素
@@ -1563,10 +1565,13 @@ o	白癜风，又称白蚀症（vitiligo）
       rows[i].style.backgroundColor = "lightgreen";
     }
   }
-  document.body.style.background = '#555';
+
   if(screen.width>=768){
-    document.body.style.maxWidth = '480px';
-    document.body.style.margin = 'auto';
+    var content=document.getElementById("00");
+    content.style.maxWidth = '480px';
+    content.style.margin = 'auto';
+    //content.style.background = 'white';
+    //content.style.padding = '10px';
   }//else
     //document.write('<meta name="viewport" content="width=device-width" >');
 </script>
