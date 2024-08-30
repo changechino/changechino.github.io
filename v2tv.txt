@@ -1,1 +1,1 @@
-vless://f0dee84c-b786-450a-af89-b6ef762fdae1@132.145.88.245:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&security=tls&sni=b295-23ap29-6bh.xn--4gq62f52gppi29k.com&fp=ios&packetEncoding=xudp#%F0%9F%87%B0%F0%9F%87%B7%E9%9F%A9%E5%9B%BD%E9%A6%96%E5%B0%94
+hy2://f0dee84c-b786-450a-af89-b6ef762fdae1@192.9.176.249:443/?mport=20000-55000&insecure=1&sni=www.bing.com#%F0%9F%87%A6%F0%9F%87%BA%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%E6%82%89%E5%B0%BC
