@@ -1,1 +1,1 @@
-vmess://eyJhZGQiOiJ5eC5uaXViaS5zaXRlIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJzZzIubml1Ymkuc2l0ZSIsImlkIjoiYTQ2ZmMzMWUtZGI5MS00YzAyLWEyZDMtZjQxY2M2ZGM3MjlmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOiIyMDUyIiwicHMiOiJbdm1lc3Nd5paw5Yqg5Z2hLTIiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
+hy2://a46fc31e-db91-4c02-a2d3-f41cc6dc729f@107.175.185.55:11000/?insecure=1&sni=www.bing.com#%5BHy2%5D%E7%BE%8E%E5%9B%BD-05
