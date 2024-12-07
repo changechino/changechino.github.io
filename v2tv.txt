@@ -1,1 +1,1 @@
-hy2://274b2151-3e98-4f7b-8a8c-d0d06abf353f@141.148.182.2:443/?mport=51000-53000&insecure=1&sni=cn.cremedelamer.com#%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E4%B8%93%E7%BA%BF02
+hy2://a46fc31e-db91-4c02-a2d3-f41cc6dc729f@146.235.58.56:11000/?insecure=1&sni=www.bing.com#%5BHy2%5D%E5%B7%B4%E8%A5%BF02
