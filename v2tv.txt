@@ -1,1 +1,1 @@
-hy2://a46fc31e-db91-4c02-a2d3-f41cc6dc729f@146.235.58.56:11000/?insecure=1&sni=www.bing.com#%5BHy2%5D%E5%B7%B4%E8%A5%BF02
+hy2://a46fc31e-db91-4c02-a2d3-f41cc6dc729f@103.106.228.55:20030/?insecure=1&sni=www.bing.com#%5BHy2%5D%E6%97%A5%E6%9C%AC-X
