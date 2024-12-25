@@ -1,1 +1,1 @@
-hy2://a46fc31e-db91-4c02-a2d3-f41cc6dc729f@146.235.58.56:11000/?insecure=1&sni=www.bing.com#%5BHy2%5D%E5%B7%B4%E8%A5%BF02
+vmess://eyJhZGQiOiJoOW1jeS1nMDYuanAwNC0zNzcxLXZtMC5lbnRyeS5mcjAzMDdhLmFydCIsImFpZCI6IjEiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiJhMGVjMmUwZi01NGIwLTM2YWUtOTE5My1mNGJiYzJlNDQwMDMiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjQ0OSIsInBzIjoi8J+Hr/Cfh7Ug5YWN6LS5LeaXpeacrDQtVmVyLjciLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
