@@ -1,1 +1,1 @@
-hy2://7becdb16-3e88-4577-a6b8-492c81806d4d@hkudp.niubi.site:23111/?insecure=1&sni=www.bing.com#%5BHy2%5D%E4%BF%84%E7%BD%97%E6%96%AF
+vmess://eyJhZGQiOiJodTlpZS1nMDYuanAwMi05YTk5LXZtMC5lbnRyeS5mcjAzMDdhLmFydCIsImFpZCI6IjEiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiJhMGVjMmUwZi01NGIwLTM2YWUtOTE5My1mNGJiYzJlNDQwMDMiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjExNzc4IiwicHMiOiLwn4ev8J+HtSDlhY3otLkt5pel5pysMi1WZXIuNyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
