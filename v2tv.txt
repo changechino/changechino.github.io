@@ -1,1 +1,1 @@
-hy2://3f7c7659-181f-4036-abad-2a383d777ea2@jp1.interld123456789.com:443/?mport=36000-37000&insecure=1&sni=1231231.1234567890spcloud.com#%E6%97%A5%E6%9C%AChy2-2-z
+hy2://3f7c7659-181f-4036-abad-2a383d777ea2@jp1.interld123456789.com:443/?mport=36000-37000&insecure=1&sni=1231231.1234567890spcloud.com#%E6%97%A5%E6%9C%AChy2-1-z
