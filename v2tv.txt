@@ -1,1 +1,1 @@
-hy2://c276e0ec-8f80-41fa-8371-e46cad000bf5@jp04.poke-mon.xyz:443/?insecure=1&sni=www.bing.com#%F0%9F%87%AF%F0%9F%87%B5%E3%80%90%E4%BA%9A%E6%B4%B2%E3%80%91%E6%97%A5%E6%9C%AC%E6%A8%B1%E8%8A%B103%E4%B8%A8%E7%9B%B4%E8%BF%9E%E3%80%902x%E3%80%91
+hy2://422ad748-7a37-40a3-9f2e-c82d48fcdc19@129.146.215.233:443/?mport=51000-53000&insecure=1&sni=cn.cremedelamer.com#%F0%9F%87%BA%F0%9F%87%B8%E7%BE%8E%E5%9B%BD%E4%B8%93%E7%BA%BF02
