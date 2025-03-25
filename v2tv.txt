@@ -1,1 +1,1 @@
-hy2://c276e0ec-8f80-41fa-8371-e46cad000bf5@tw.poke-mon.xyz:443/?mport=20000-50000&insecure=1&sni=www.bing.com#%F0%9F%87%B9%F0%9F%87%BC%E3%80%90%E4%BA%9A%E6%B4%B2%E3%80%91%E5%8F%B0%E6%B9%BE%E5%AE%B6%E5%AE%BD02%E4%B8%A8%E7%9B%B4%E8%BF%9E
+hy2://3e68f5b0-b497-4446-8602-64bb16fb297f@107.175.185.55:11000/?insecure=1&sni=www.bing.com#%E7%BE%8E%E5%9B%BD-02
