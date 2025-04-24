@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+      min-width: 200px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .good { color: green; }
+    .bad { color: #b58900; } /* 现在是深黄色 */
+    .risky { color: red; }    /* 现在是红色 */
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      tr {
+        margin: 0 0 1rem 0;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+      }
+      td::before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 45%;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+      td:nth-of-type(1)::before { content: "神经递质"; }
+      td:nth-of-type(2)::before { content: "增加的健康活动"; }
+      td:nth-of-type(3)::before { content: "减少的有害活动"; }
+      td:nth-of-type(4)::before { content: "不健康的增加"; }
+      td:nth-of-type(5)::before { content: "健康但减少"; }
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>神经递质</th>
+        <th>增加的健康活动</th>
+        <th>减少的有害活动</th>
+        <th>不健康的增加（<span style="color:red">红色</span>）</th>
+        <th>健康但减少</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>多巴胺</td>
+        <td class="good">有氧运动、听音乐、阳光、冥想、按摩、富含酪氨酸的食物</td>
+        <td class="bad">睡眠不足、慢性压力、社交媒体沉迷</td>
+        <td class="risky">吸毒（可卡因）、酗酒、赌博、色情内容</td>
+        <td class="good">冥想断欲、减少即时奖励</td>
+      </tr>
+      <tr>
+        <td>血清素</td>
+        <td class="good">户外活动、冥想、色氨酸食物、光照疗法</td>
+        <td class="bad">营养不良、睡眠差、压力</td>
+        <td class="risky">MDMA、抗抑郁药过量</td>
+        <td class="good">禁欲期、长期独处</td>
+      </tr>
+      <tr>
+        <td>去甲肾上腺素</td>
+        <td class="good">冷水浴、适度运动、冥想</td>
+        <td class="bad">压力过大、缺觉</td>
+        <td class="risky">安非他命、强烈惊吓</td>
+        <td class="good">静坐冥想</td>
+      </tr>
+      <tr>
+        <td>肾上腺素</td>
+        <td class="good">高强度运动、冒险游戏（适度）</td>
+        <td class="bad">慢性焦虑、持续压力</td>
+        <td class="risky">恐怖刺激、极限运动成瘾</td>
+        <td class="good">休假、静心</td>
+      </tr>
+      <tr>
+        <td>乙酰胆碱</td>
+        <td class="good">学习、力量训练、胆碱类食物（蛋、鱼）</td>
+        <td class="bad">睡眠差、营养差</td>
+        <td class="risky">认知药物滥用</td>
+        <td class="good">安静、降低刺激环境</td>
+      </tr>
+      <tr>
+        <td>GABA</td>
+        <td class="good">冥想、深呼吸、发酵食品</td>
+        <td class="bad">压力大、缺觉</td>
+        <td class="risky">酒精、安眠药依赖</td>
+        <td class="good">减少刺激、禁欲期</td>
+      </tr>
+      <tr>
+        <td>谷氨酸</td>
+        <td class="good">高蛋白饮食、运动</td>
+        <td class="bad">过量味精、慢性压力</td>
+        <td class="risky">谷氨酸钠添加剂</td>
+        <td class="good">饮食控制、禁味精</td>
+      </tr>
+      <tr>
+        <td>内啡肽</td>
+        <td class="good">笑、运动、冥想、巧克力、按摩</td>
+        <td class="bad">压力、孤独</td>
+        <td class="risky">高糖、高油饮食、酒精</td>
+        <td class="good">冥想内观、节食</td>
+      </tr>
+      <tr>
+        <td>催产素</td>
+        <td class="good">亲密关系、社交互动、拥抱、养宠物</td>
+        <td class="bad">社交隔离、压力</td>
+        <td class="risky">情绪操控、强制亲密</td>
+        <td class="good">独处疗愈、社交断舍离</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
